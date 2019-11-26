@@ -1,0 +1,26 @@
+{
+  "name": "graphql-endpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "graphql.js",
+  "dependencies": {
+    "apollo-server-lambda": "^2.9.12",
+    "graphql": "^14.5.8",
+    "serverless": "^1.58.0",
+    "serverless-offline": "^5.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralexand56/graphql-endpoint.git"
+  },
+  "author": "Rico Alexander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ralexand56/graphql-endpoint/issues"
+  },
+  "homepage": "https://github.com/ralexand56/graphql-endpoint#readme"
+}
