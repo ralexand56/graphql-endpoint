@@ -47,11 +47,7 @@
                         "Fn::Join": [
                           "",
                           [
-                            "arn:",
-                            {
-                              "Ref": "AWS::Partition"
-                            },
-                            ":s3:::",
+                            "arn:aws:s3:::",
                             {
                               "Ref": "ServerlessDeploymentBucket"
                             },
@@ -159,7 +155,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/apollo-lambda/dev/1574742844994-2019-11-26T04:34:04.994Z/apollo-lambda.zip"
+                "S3Key": "serverless/apollo-lambda/dev/1574752409725-2019-11-26T07:13:29.725Z/apollo-lambda.zip"
               },
               "FunctionName": "apollo-lambda-dev-graphql",
               "Handler": "graphql.graphqlHandler",
@@ -178,14 +174,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "GraphqlLambdaVersionXOXi7vSPv4y7AV9ZSYcOcaLnZcOSl9WSkUeSFrxk": {
+          "GraphqlLambdaVersionqFe9TO67G12YBPlvluIMnDmbsglQbzfN115ExNVVH00": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GraphqlLambdaFunction"
               },
-              "CodeSha256": "pIhEyQ50OQNcOYODV/mpVXOs4eb5LaaBR06pZ0mBVfo="
+              "CodeSha256": "tXie028BBgbfZ7mVeJCaVsN2FNj9LBJJXtnYYWkbO4w="
             }
           },
           "ApiGatewayRestApi": {
@@ -359,7 +355,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1574742826317": {
+          "ApiGatewayDeployment1574752234805": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -420,7 +416,7 @@
           "GraphqlLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GraphqlLambdaVersionXOXi7vSPv4y7AV9ZSYcOcaLnZcOSl9WSkUeSFrxk"
+              "Ref": "GraphqlLambdaVersionqFe9TO67G12YBPlvluIMnDmbsglQbzfN115ExNVVH00"
             }
           },
           "ServiceEndpoint": {
@@ -483,11 +479,7 @@
                         "Fn::Join": [
                           "",
                           [
-                            "arn:",
-                            {
-                              "Ref": "AWS::Partition"
-                            },
-                            ":s3:::",
+                            "arn:aws:s3:::",
                             {
                               "Ref": "ServerlessDeploymentBucket"
                             },
@@ -588,10 +580,10 @@
     },
     "serviceFilename": "serverless.yml",
     "layers": {},
-    "artifact": "/Users/ricoalexander/Projects/graphql-endpoint/.serverless/apollo-lambda.zip"
+    "artifact": "C:\\github\\graphql-endpoint\\.serverless\\apollo-lambda.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/apollo-lambda/dev/1574742844994-2019-11-26T04:34:04.994Z",
+    "artifactDirectoryName": "serverless/apollo-lambda/dev/1574752409725-2019-11-26T07:13:29.725Z",
     "artifact": "apollo-lambda.zip"
   }
 }
