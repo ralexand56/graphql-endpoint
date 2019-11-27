@@ -1,16 +1,29 @@
 const { ApolloServer, gql } = require("apollo-server-lambda");
 
+let teams = ["Ravens", "Seahawks", "Superbowl", "Patriots"];
+
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
   type Query {
-    hello: [String]
+    getTeams: [String]
+  }
+
+  type Mutation {
+    createTeam(name: String, id: Int): [String]
   }
 `;
 
 // Provide resolver functions for your schema fields
 const resolvers = {
   Query: {
-    hello: () => ["Ravens", "Seahawks", "Superbowl", "Patriots"]
+    getTeams: () => teams
+  },
+  Mutation: {
+    createTeam: (_, { name, id }) => {
+      teams.push(name);
+      console.log(id);
+      return teams;
+    }
   }
 };
 
