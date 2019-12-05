@@ -1,4 +1,13 @@
 const { ApolloServer, gql } = require("apollo-server-lambda");
+const { Client } = require("pg");
+
+const client = new Client({
+  user: "ralexand56",
+  host: "budget-db.cgriuypuaifa.us-east-1.rds.amazonaws.com",
+  database: "budget-test",
+  password: "wGUQUIniNIMSbUe19zaT",
+  port: 5432
+});
 
 let teams = ["Ravens", "Seahawks", "Superbowl", "Patriots"];
 
@@ -19,9 +28,14 @@ const resolvers = {
     getTeams: () => teams
   },
   Mutation: {
-    createTeam: (_, { name, id }) => {
+    createTeam: async (_, { name, id }) => {
       teams.push(name);
-      console.log(id);
+      // console.log(id);
+
+      client.connect();
+
+      const resp = await client.query("select * from line_item");
+      console.log(resp.rows);
       return teams;
     }
   }
