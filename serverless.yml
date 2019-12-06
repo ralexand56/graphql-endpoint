@@ -1,3 +1,5 @@
+org: ralexand56
+app: myapp
 # serverless.yml
 
 service: apollo-lambda
